@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <title>Order Form- Morehouse Pizza Kitchen</title>
+    </head>
+    <body>
+        <div class="link-to-homepage">
+            <div class="button-container">
+                <button onclick="window.location.href='index.html'" class="homepage">Home</button>
+            </div>>
+        </div>
+        <form name="pizza">
+            <h3>Morehouse Pizza</h3>
+            <label for="name">Name</label>
+            <input  id="name" type="text" placeholder="Enter name here"/>
+
+            <h4>Sauce</h4>
+            <br>
+            <input type="radio" id="marinara" name="sauce"/>
+            <label for="marinara">Marinara</label>
+            <br>
+            <input type="radio" id="bbq" name="sauce"/>
+            <label for="bbq">BBQ</label>
+            <br>
+
+            <h4>Cheese</h4>
+            <input type="checkbox" name="cheese" id="mozzarella" value="cheese"/>
+            <label for="cheeese">Mozzarella</label>
+            <br>
+            <input type="checkbox" name="cheese" id="cheddar" value="cheese"/>
+            <label for="cheese">Cheddar</label>
+            <br>
+            <input type="checkbox" name="cheese" id="provolone" value="cheese"/>
+            <label for="cheese">Provolone</label>
+            <input type="checkbox" name="cheese" id="parmesan" value="cheese"/>
+            <label for="cheese">Parmesan</label>
+
+            <h4>Toppings</h4>
+            <input type="checkbox" name="toppings" id="pepperoni" value="toppings"/>
+            <label for="toppings">Pepperoni</label>
+            <br>
+            <input type="checkbox" name="toppings" id="bacon" value="toppings"/>
+            <label for="toppings">Bacon</label>
+            <br>
+            <input type="checkbox" name="toppings" id="italiansausage" value="toppings"/>
+            <label for="toppings">Italian Sausage</label>
+
+            <h4>Number of Pizzas</h4>
+            <input type="number" id="Count" min="1" max="12"/>
+            <br><br>
+            <div class="button-container">
+                <button class="reset">Reset</button>
+                <button onclick="window.location.href='receipt.html'" class="submit">Submit</button>
+            </div>
+        </form>
+        <script>
+            const form = document.getElementsByName("pizza")[0];
+            form.onsubmit = (e) => { 
+                e.preventDefault();
+                console.log(e);
+            }
+        </script>
+    </body>
+</html>
