@@ -1,0 +1,190 @@
+:root {
+    --pink: #FCDDDF; 
+    --maroon: #800000; 
+    --blue: #1599D2; 
+    --green: #31BA8F;
+    --lime:  #D3DF3D;
+    --softBlueGreen: #80CECA; 
+    --red: #FF0000;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 300;
+    height: 200;
+}
+h1 {
+    margin-top: 0;
+    text-align: center; 
+    color: white; 
+    font-size: 32px;
+    font-family: 'Apple Chancery';
+}
+h2 {
+    margin-top: 0;
+    text-align: center; 
+    color: white; 
+    font-size: 32px;
+    font-family: 'Apple Chancery';
+}
+p {
+    font-size: 16px; 
+    font-family: 'Apple Chancery';
+    color: var(--white);  
+}
+body {
+    background-image: radial-gradient(maroon, black);
+    background-color: var(--maroon); 
+}
+h3 {
+    margin-top: 0;
+    text-align: center; 
+    color: white; 
+    font-size: 32px;
+    font-family: 'Apple Chancery';
+}
+h4 {
+    font-size: 24px; 
+    text-align: center;
+    font-family: 'Apple Chancery';
+    color: var(--white); 
+}
+form {
+    font-size: 18px; 
+    max-width: 600px;  
+    width: 70%;  
+    background-image: radial-gradient(maroon, 75% black, 75%);
+    background-image: url(MaroonTiger.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+    padding: 15px; 
+    margin: 45px auto; 
+    border: 20px solid var(--white); 
+    border-radius: 20px; 
+}
+label {
+    font-weight: bold; 
+    font-family: 'Apple Chancery';
+    margin: 12px; 
+    color: white; 
+}
+.button-container {
+    margin: 0 auto; 
+    width: auto; 
+    max-width: 250px; 
+}
+button {
+    width: 100px; 
+    padding: 6px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border-radius: 5px;
+    background-color: white;
+    color: maroon;
+}
+button.reset {
+    background-color: var(--red); 
+    color: white; 
+}
+button.submit {
+    background-color: white; 
+}
+error {
+    display: none; 
+    position: fixed;
+    top: 30px;
+    left: 31%;
+    color: red; 
+    font-weight: bold; 
+    max-width: 600px;  
+    width: 100%; 
+    background-color : white; 
+    border: 3px solid gray; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 24px; 
+}
+error.bounce {
+ /* animation */
+    animation-name: bounce;
+	animation-duration: .5s;             /* or: 500ms */
+	animation-iteration-count: 3;
+	animation-direction: normal;         /* or: alternate, reverse */
+	animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear,
+                                              cubic-bezier(x1, y1, x2, y2) */
+	animation-fill-mode: forwards;       /* or: backwards, both, none */
+	animation-delay: 0s;                 /* or: 0ms */
+}
+error.show.transform {
+    transition: all 10s ease;      /* add this line for smooth transition */
+    webkit-transform: rotateY(180deg); 
+    moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+error.show.animate-transform {
+    animation-name: rotate;
+	animation-duration: 2s;             /* or: 500ms */
+	animation-iteration-count: 4;
+	animation-direction: normal;         /* or: alternate, reverse */
+	animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear,
+                                              cubic-bezier(x1, y1, x2, y2) */
+	animation-fill-mode: forwards;       /* or: backwards, both, none */
+	animation-delay: 0s;                 /* or: 0ms */
+}
+@keyframes rotate {
+    0% {
+    }
+    25% {
+        webkit-transform: rotateY(90deg) scale(1.5, 1.5); 
+        moz-transform: rotateY(90deg) scale(1.5, 1.5);
+        transform: rotateY(90deg) scale(1.5, 1.5);
+    }
+    75% {
+        webkit-transform: rotateY(90deg) scale(1.5, 1.5); 
+        moz-transform: rotateY(90deg) scale(1.5, 1.5);
+        transform: rotateY(90deg) scale(1.5, 1.5);
+    }
+    100% {
+    }
+}
+error.show {
+    display: inline-block; 
+}
+orders {
+    display: block;
+    font-size: 18px; 
+    max-width: 600px;  
+    min-width: 70%; 
+    width: 70%; 
+    background-color: var(--green); 
+    padding: 15px; 
+    margin: 45px auto; 
+    border: 20px solid var(--lime); 
+    border-radius: 20px; 
+    color: white; 
+}
+/* Bounce */
+@keyframes bounce {
+    0% {
+        top: 30px; 
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 30px; 
+    }
+}
+table, tr, td {
+    border: 2px solid white;
+} 
+table {
+    width: 100%;
+}
+tr, td {
+    text-align: center;
+}
